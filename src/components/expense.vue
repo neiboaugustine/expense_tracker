@@ -78,6 +78,7 @@ export default {
   },
   deleteItem(index){
         this.description.splice(index,1)
+        this.description.amount=null
       }
   }
  
