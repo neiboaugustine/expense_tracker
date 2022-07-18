@@ -37,7 +37,7 @@
           <td><span>{{item.name}}</span></td>
           <td><span>{{item.date}}</span></td>
           <td><span>{{item.amount}}</span></td>
-          <td @click="deleteItem"><span id="delete">Delete</span></td>
+          <td @click="deleteItem"><span id="delete"><i class="fas fa-trash"></i></span></td>
         </tr>
       </tbody>
     </table>
@@ -75,6 +75,9 @@ export default {
         date:this.description.date,
         amount:this.description.amount
       }) 
+      this.description.name=''
+      this.description.date=''
+      this.description.amount=''
   },
   deleteItem(index){
         this.description.splice(index,1)
